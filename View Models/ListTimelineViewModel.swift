@@ -32,9 +32,9 @@ class ListTimelineViewModel {
    private let fetcher: TimelineFetcher
    
    // MARK: - Input
-   var pause: Bool = false {
+   var paused: Bool = false {
       didSet {
-         fetcher.paused.value = pause
+         fetcher.paused.value = paused
       }
    }
    

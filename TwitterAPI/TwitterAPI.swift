@@ -63,6 +63,7 @@ struct TwitterAPI: TwitterAPIProtocol {
   }
 
   static func timeline(of list: ListIdentifier) -> (AccessToken, TimelineCursor) -> Observable<[JSONObject]> {
+   
     return { account, cursor in
       var params = ["owner_screen_name": list.username, "slug": list.slug]
       if cursor != TimelineCursor.none {
